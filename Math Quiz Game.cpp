@@ -175,11 +175,8 @@ void RunQuestions(stQuizzResults& QuizzResults, stQuestion& Question)
 		FillQuestion(Question);
 
 		SetScreenColor(Question.IsCorrect);
-
-		if (Question.IsCorrect)
-			QuizzResults.NumberOfCorrectAnswers++;
-		else
-			QuizzResults.NumberOfWrongAnswers++;
+		
+		(Question.IsCorrect) ? QuizzResults.NumberOfCorrectAnswers++ : QuizzResults.NumberOfWrongAnswers++;
 	}
 }
 
